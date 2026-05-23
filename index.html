@@ -104,12 +104,12 @@
     .ph-track{display:flex;height:70vh;max-height:600px;min-height:300px;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
     .ph-slide{min-width:100%;height:100%;position:relative;flex-shrink:0;cursor:zoom-in;background:var(--black)}
     .ph-slide img{width:100%;height:100%;object-fit:cover;object-position:center center;pointer-events:none}
-    .ph-slide:nth-child(1) img{object-position:center 25%}  /* img1 - façade */
-    .ph-slide:nth-child(2) img{object-position:center center} /* img2 - atelier intérieur */
-    .ph-slide:nth-child(3) img{object-position:center 40%}  /* img3 - Audi+Range Rover */
-    .ph-slide:nth-child(4) img{object-position:center 50%}  /* img4 - Porsche diagnostic */
-    .ph-slide:nth-child(5) img{object-position:center 20%}  /* img5 - Serge façade */
-    .ph-slide:nth-child(6) img{object-position:center 40%}  /* img6 - mécanicien */
+    .ph-slide:nth-child(1) img{object-position:center 25%}  /* Img1 - façade */
+    .ph-slide:nth-child(2) img{object-position:center center} /* Img2 - atelier intérieur */
+    .ph-slide:nth-child(3) img{object-position:center 40%}  /* Img3 - Audi+Range Rover */
+    .ph-slide:nth-child(4) img{object-position:center 50%}  /* Img4 - Porsche diagnostic */
+    .ph-slide:nth-child(5) img{object-position:center 20%}  /* Img5 - Serge façade */
+    .ph-slide:nth-child(6) img{object-position:center 40%}  /* Img6 - mécanicien */
     .ph-cap{position:absolute;bottom:0;left:0;right:0;padding:20px 32px;background:linear-gradient(transparent,rgba(10,10,10,.75));font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white)}
     .ph-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(10,10,10,.65);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);color:var(--white);width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
     .ph-arrow:hover{background:var(--red);border-color:var(--red)}
@@ -376,12 +376,12 @@
 <!-- CARROUSEL PHOTOS -->
 <div id="photos" aria-label="Photos de l'atelier">
   <div class="ph-track" id="ph-track">
-    <div class="ph-slide"><img src="img1.jpeg" alt="Façade ENERGIC AUTO"/><div class="ph-cap">Façade du garage</div></div>
-    <div class="ph-slide"><img src="img2.jpeg" alt="Atelier ENERGIC AUTO"/><div class="ph-cap">L'atelier</div></div>
-    <div class="ph-slide"><img src="img3.jpeg" alt="Audi Q7 et Range Rover"/><div class="ph-cap">Toutes marques</div></div>
-    <div class="ph-slide"><img src="img4.jpeg" alt="Diagnostic électronique sur Porsche"/><div class="ph-cap">Diagnostic électronique</div></div>
-    <div class="ph-slide"><img src="img5.jpeg" alt="Serge Autier devant le garage"/><div class="ph-cap">Serge à votre service</div></div>
-    <div class="ph-slide"><img src="img6.jpeg" alt="Mécanicien au travail"/><div class="ph-cap">Intervention en cours</div></div>
+    <div class="ph-slide"><img src="Img1.jpeg" alt="Façade ENERGIC AUTO"/><div class="ph-cap">Façade du garage</div></div>
+    <div class="ph-slide"><img src="Img2.jpeg" alt="Atelier ENERGIC AUTO"/><div class="ph-cap">L'atelier</div></div>
+    <div class="ph-slide"><img src="Img3.jpeg" alt="Audi Q7 et Range Rover"/><div class="ph-cap">Toutes marques</div></div>
+    <div class="ph-slide"><img src="Img4.jpeg" alt="Diagnostic électronique sur Porsche"/><div class="ph-cap">Diagnostic électronique</div></div>
+    <div class="ph-slide"><img src="Img5.jpeg" alt="Serge Autier devant le garage"/><div class="ph-cap">Serge à votre service</div></div>
+    <div class="ph-slide"><img src="Img6.jpeg" alt="Mécanicien au travail"/><div class="ph-cap">Intervention en cours</div></div>
   </div>
   <button class="ph-arrow ph-prev" aria-label="Photo précédente" onclick="phMove(-1)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -603,7 +603,7 @@
 
   // ── CARROUSEL PHOTOS ──
   let phIdx = 0, phTotal = 6, phDragging = false, phStartX = 0, phDelta = 0;
-  const phSrcs = ['img1.jpeg','img2.jpeg','img3.jpeg','img4.jpeg','img5.jpeg','img6.jpeg'];
+  const phSrcs = ['Img1.jpeg',Img2.jpeg','Img3.jpeg','Img4.jpeg','Img5.jpeg','Img6.jpeg'];
   function initPh() {
     const dotsEl = document.getElementById('ph-dots');
     for (let i = 0; i < phTotal; i++) {
